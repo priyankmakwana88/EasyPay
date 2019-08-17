@@ -154,17 +154,6 @@
           <li>
             <a href="#">About</a>
           </li>
-          <li>
-            <a href="#">Products</a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
-            <ul class="dropdown-menu" aria-labelledby="about-us">
-              <li><a href="#">Engage</a></li>
-              <li><a href="#">Pontificate</a></li>
-              <li><a href="#">Synergize</a></li>
-            </ul>
-          </li>
         </ul>
 
 
@@ -178,7 +167,7 @@
   <!-- TBE -->
   <div class="jumbotron feature">
     <div class="container">
-      <h1>EasyPay</h1>
+      <h1><strong>EasyPay</strong></h1>
       <p font-size: 100px>Pay ALL Your Bills Here.</p>
     </div>
   </div>
@@ -196,7 +185,7 @@
           <h1 class="panel-title"><span class="glyphicon glyphicon-random"></span>&nbsp; <strong>Biller Categories</strong></h1>
         </div>
         <div class="list-group" ng-repeat = "category in category_list ">
-          <a class="list-group-item" ng-click="featch_category_details(category)"><img src="images/{{category}}.png" width="10%" > &nbsp; {{category}}</a>
+          <a class="list-group-item" ng-click="featch_category_details(category)" href="#"><img src="images/{{category}}.png" width="10%" > &nbsp; {{category}}</a>
         </div>
       </div>
 
@@ -230,7 +219,7 @@
           <article class="col-xs-12">
             <div class="media">
               <div class="media-body">
-                <h2 class="media-heading"><a href="#">Welcome!</a></h2>
+                <h2 class="media-heading">Welcome!</h2>
                 <br>
                 <p>Welcome to Easy Pay (EP) facility of Billdesk. It is a self service solution, to manage your various consumer bills online and services you availed from us through this website. Once registered, you can view and pay your bills, raise and track service requests. Now empower yourself by simply registering as per the direction provided on the website and start availing the services provided by us. </p>
               </div>
@@ -315,47 +304,34 @@
         </div>
 
         <div class="col-sm-3 footer-blurb-item" align=Center>
-          <h3>Company</h3>
+          <h4>Help & Support</h4>
           <br>
-          <h5>About</h5>
-          <h5>Team</h5>
-          <h5>Career</h5>
-          <h5>Blog</h5>
+          <h5>Home</h5>
+          <h5>Mobile Apps</h5>
+          <h5>Payment Options</h5>
+          <h5>FAQ</h5>
+        </div>
+
+        <div class="col-sm-3 footer-blurb-item" align=Center>
+          <h4>Policies</h4>
+          <br>
+          <h5>Privacy Policy</h5>
+          <h5>Terms & Conditions</h5>
+          <h5>Refund Policy</h5>
+          <h5>Grievance Policy</h5>
         </div>
 
         <div class="col-sm-3 footer-blurb-item">
-          <h3><span class="glyphicon glyphicon-paperclip"></span> Complete</h3>
-          <p>Professionally cultivate one-to-one customer service with robust ideas. Completely synergize resource taxing relationships via premier niche markets. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
-          <p><a class="btn btn-default" href="#">Complete</a></p>
-        </div>
-        <div class="col-sm-3 footer-blurb-item">
+						<!-- Thumbnails -->
+            <br>
+						<h5 align=Center> <strong>Powered By</strong></h5>
+							<div class="row">
+								<div class="col-xs-6">
+									<img src="images/BD-Logo-Black.png" height="15%">
+								</div>
+							</div>
 
-          <!-- Thumbnails -->
-          <h3><span class="glyphicon glyphicon-camera"></span> Phosfluorescent</h3>
-          <div class="row">
-            <div class="col-xs-6">
-              <a href="#" class="thumbnail">
-                <img src="holder.js/110x80" alt="">
-              </a>
-            </div>
-            <div class="col-xs-6">
-              <a href="#" class="thumbnail">
-                <img src="holder.js/110x80" alt="">
-              </a>
-            </div>
-            <div class="col-xs-6">
-              <a href="#" class="thumbnail">
-                <img src="holder.js/110x80" alt="">
-              </a>
-            </div>
-            <div class="col-xs-6">
-              <a href="#" class="thumbnail">
-                <img src="holder.js/110x80" alt="">
-              </a>
-            </div>
-          </div>
-
-        </div>
+					</div>
 
       </div>
       <!-- /.row -->
@@ -365,7 +341,7 @@
   <div class="small-print">
     <div class="container">
       <p><a href="#">Terms &amp; Conditions</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
-      <p>Copyright &copy; Example.com 2015 </p>
+      <p>Copyright &copy; easypay.com 2015 </p>
     </div>
   </div>
 </footer>
