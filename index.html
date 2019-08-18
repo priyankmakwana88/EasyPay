@@ -125,6 +125,18 @@
         }
       })
     }
+
+    $scope.formStatus=false;
+    $scope.submitForm=function(){
+
+      if(!$scope.billerAccountForm.$invalid){
+        $scope.formStatus=true;
+        alert('Biller Account Added Successfully!');
+      }
+      else{
+        alert('Invalid Details!');
+      }
+    }
   })
 
   </script>
@@ -231,7 +243,8 @@
                 <h2 class="media-heading" align=Center><strong>{{selectedBiller}}</strong></h2>
                 <br>
 
-                <form name="billerAccountForm">
+                <!-- ng-submit="submitForm()" -->
+                <form name="billerAccountForm" ng-submit="submitForm()">
                   <div class="form-group" ng-repeat="auth in auth_list">
                     <!-- FOR NON LIST FIELDS -->
                     <p ng-if="auth.data_type != 'List'">
@@ -247,7 +260,7 @@
                       </select>
                     </p>
                   </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-default" >Submit</button>
                 </form>
 
               </div>
