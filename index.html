@@ -191,12 +191,8 @@
 
     </div><!--/Left Column-->
 
-
-
     <!-- Center Column -->
     <div class="col-sm-6">
-
-      <!-- Alert -->
       <!-- LOCATION DROPDOWN -->
       <div class="dropdown" >
         <div ng-show="country_list.length > 0"><h3>Category : {{category}}</h3></div>
@@ -235,14 +231,20 @@
                 <h2 class="media-heading" align=Center><strong>{{selectedBiller}}</strong></h2>
                 <br>
 
-                <form >
+                <form name="billerAccountForm">
                   <div class="form-group" ng-repeat="auth in auth_list">
+                    <!-- FOR NON LIST FIELDS -->
                     <p ng-if="auth.data_type != 'List'">
-                      <strong>Enter {{auth.parameter_name}} :</strong><input ng-if="auth.data_type != 'List'" type="text" class="form-control"  id="uid" name="uid" placeholder="{{auth.parameter_name}}">
+                      <strong>Enter {{auth.parameter_name}} :</strong>
+                      <input ng-if="auth.data_type != 'List'" type="text" class="form-control"  id="uid" name="uid" placeholder="{{auth.parameter_name}}">
                     </p>
-                    <p ng-if="auth.data_type == 'List'"><strong>Select {{auth.parameter_name}} :</strong> &nbsp;<select ng-model="selectedChoice" ng-if="auth.data_type == 'List'"></p>
-                      <option ng-repeat="choice in auth.list_of_values" value="{{choice.value}}"> {{choice.name}} </option>
-                    </select>
+                    <!-- FOR LIST FIELDS -->
+                    <p ng-if="auth.data_type == 'List'">
+                      <strong>Select {{auth.parameter_name}} :</strong> &nbsp;
+                      <select ng-model="selectedChoice" ng-if="auth.data_type == 'List'">
+                        <option ng-repeat="choice in auth.list_of_values" value="{{choice.value}}"> {{choice.name}} </option>
+                      </select>
+                    </p>
                   </div>
                   <button type="submit" class="btn btn-default">Submit</button>
                 </form>
