@@ -236,8 +236,9 @@
                     <!-- FOR NON LIST FIELDS -->
                     <p ng-if="auth.data_type != 'List'">
                       <strong>Enter {{auth.parameter_name}} :</strong>
-                      <input ng-if="auth.data_type != 'List'" type="text" class="form-control"  id="uid" name="uid" placeholder="{{auth.parameter_name}}">
+                      <input ng-if="auth.data_type != 'List'" ng-pattern="{{auth.regex}}" required="required" name="name{{auth.seq}}"  ng-model="name" type="text" class="form-control"  id="uid" name="uid" placeholder="{{auth.parameter_name}}">
                     </p>
+                    <span style="color:red" ng-show="billerAccountForm.name{{auth.seq}}.$dirty && billerAccountForm.name{{auth.seq}}.$invalid" class="ng-hide">{{auth.error_message}}</span>
                     <!-- FOR LIST FIELDS -->
                     <p ng-if="auth.data_type == 'List'">
                       <strong>Select {{auth.parameter_name}} :</strong> &nbsp;
