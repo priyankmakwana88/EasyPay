@@ -16,6 +16,15 @@ select, option {
 	color: black;
 	}
 
+  #preloader {
+    /* padding:100px; */
+    /* width: 50px; */
+    margin-left: 43%;
+    margin-top: 18%;
+    background: no-repeat 50% 50% transparent;
+    /* background: url('images/Preloader/Preloader.gif') no-repeat 50% 50% transparent; */
+  }
+
 #feature-carousel {
 	min-height: 200px;
 	}
